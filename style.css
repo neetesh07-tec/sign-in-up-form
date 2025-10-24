@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #d7bdf1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 800px;
+  min-height: 500px;
+  border-radius: 10px;
+  box-shadow: 14px 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.signin-title{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.title{
+  margin-bottom: 15px;
+}
+
+.signin,
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.circul {
+  display: flex;
+  gap: 10px;
+}
+
+.gol {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid lightblue;
+  background-color: white;
+  box-shadow: 0.5px 0 3px rgba(0, 0, 0, 0.25);
+  overflow: hidden; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.gol img {
+  width: 60%; 
+  height: 60%;
+  object-fit: cover; 
+  display: block; 
+}
+
+.not {
+  margin-top: 0; 
+  border: none;
+  border-radius: 20px !important;
+  padding: 13px 40px !important;
+  background-color: #ff5a31;
+  color: #fff;
+  font-size: 15px !important;
+  font-weight: bold;
+  letter-spacing: 1px !important;
+  cursor: pointer !important;
+  transition: transform 80ms ease-in;
+}
+
+button:hover {
+  transform: scale(1.01);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 0; 
+  width: 100%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.signin p {
+  font-size: 14.5x;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+.signup {
+  background: linear-gradient(to right, #f7654b, #ff416c);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  width: 100%;
+}
+.signup-greeting{
+    font-size: 2rem;
+    color: #eee;
+    font-weight: bold
+}
+ .gost{
+  margin-top: 0; 
+  border-color: #eee;
+  border-radius: 20px;
+  padding: 13px 40px ;
+  background-color: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 80ms ease-in;;
+ }
+
+ .signup-text{
+    color: #eee;
+    font-weight: bold
+ }
+
+ @media (max-width: 900px) {
+  .container {
+    width: 90%;
+    grid-template-columns: 1fr; /* stack the two sections vertically */
+    min-height: auto;
+  }
+
+  .signin, .signup {
+    padding: 30x 20x;
+  }
+
+  .signup {
+    order: -1; /* show Sign-up on top if you prefer */
+  }
+}
+
+/* 📱 For mobile screens */
+@media (max-width: 600px) {
+  body {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    width: 95%;
+    box-shadow: 8px 8px 18px rgba(0,0,0,0.2);
+  }
+
+  .signin, .signup {
+    padding: 30px;
+    gap: 15px;
+  }
+
+  .signin input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px 35px;
+    font-size: 14px;
+  }
+
+  .circul {
+    gap: 8px;
+  }
+
+  .gol {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gol img {
+    width: 70%;
+    height: 70%;
+  }
+
+  .signup p.signup-text {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+
+/*  very small phones */
+@media (max-width: 400px) {
+  .title {
+    font-size: 18px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+}
